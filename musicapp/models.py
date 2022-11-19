@@ -18,7 +18,7 @@ class Song(models.Model):
         return self.title
 class Lyric(models.Model):
     content = models.IntegerField()
-    song_id = models.ForeignKey(Song, on_delete = models.PROTECT)
+    song_id = models.ForeignKey(Song, on_delete = models.CASCADE)
 
     def __str__(self):
-        return self.content
+        return self.song_id
